@@ -8,6 +8,7 @@ function Shape() {
   const torusRef = useRef();
   const boxRef = useRef();
   const groupRef = useRef();
+  const coneRef = useRef();
 
   useFrame((state, delta) => {
     if (sphereRef.current) {
@@ -25,6 +26,9 @@ function Shape() {
     if (groupRef.current) {
         groupRef.current.rotation.y += 0.003;
     }
+    if (coneRef.current) {
+      coneRef.current.rotation.y += 0.003;
+  }
   });
 
   return (
